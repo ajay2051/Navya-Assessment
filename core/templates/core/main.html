@@ -1,17 +1,6 @@
-<!DOCTYPE html>
+{% extends "./base.html" %}
 {% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>User Information</title>
-</head>
-<body style="font-family:Poppins; background-color:blue;">
-    <div >
-        <img src="{% static 'images/logo.png' %}" alt="" style="display: block;
-            height: 10vh;
-            width: 10vw;
-            margin: 0 auto;">
-    </div>
+{% block content %}
 <div>
     <table style="border-collapse: collapse;
         border: 1px solid black;
@@ -63,7 +52,19 @@
         </tr>
         {% endfor %}
     </table>
+<!--    <div>-->
+<!--        <button style="display: block;-->
+<!--          margin: 0 auto;-->
+<!--          padding: 10px 20px;-->
+<!--          border: 1px solid #ccc;-->
+<!--          border-radius: 5px;-->
+<!--          background-color: #eee;-->
+<!--          color: #333;-->
+<!--          cursor: pointer;"><a href="{% url 'generate_pdf' %}"-->
+<!--                               style="color:black;-->
+<!--                               font-size: 20px;-->
+<!--                               font-family:Poppins;-->
+<!--                               text-decoration:none">Download This Page As PDF</a></button>-->
+<!--    </div>-->
 </div>
-
-</body>
-</html>
+{% endblock %}
